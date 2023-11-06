@@ -21,7 +21,9 @@ function Header() {
     {user.fullName ?<div className='userName'>Welcome {user.fullName} !</div>:<div></div> }
  
       {!user.fullName ?
- <StyledLink  to="/login" state={{cart:JSON.parse(localStorage.getItem('cart'))}}>login</StyledLink>:
+//  <StyledLink  to="/login" state={{cart:JSON.parse(localStorage.getItem('cart'))}}>login</StyledLink>:
+ <StyledLink  to="/login" >login</StyledLink>:
+
  <StyledLink
  to="/"
  onClick={() => {

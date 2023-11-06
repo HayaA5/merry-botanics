@@ -13,7 +13,6 @@ function Login() {
   //const [password, setPassword] = useState('');
   const [message, setMessage] = useState('')
   const navigate = useNavigate()
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const url = "/users/login"
@@ -30,9 +29,10 @@ function Login() {
         localStorage.setItem('token', result.message.token);
         setUser(result.message.userDetails)
         //setCart(JSON.parse(localStorage.getItem('cart')))
-        navigate('/', {state:{
-          cart: JSON.parse(localStorage.getItem('cart')),
-        }}) 
+        // navigate('/', {state:{
+        //   cart: JSON.parse(localStorage.getItem('cart')),
+        // }}) 
+        navigate('/') 
        
       } else {
         setMessage('email or password is not valid')
@@ -43,16 +43,16 @@ function Login() {
         //return false;
       }
     });
-    
-
+  
+  }
+}
     //   localStorage.setItem('token', result.token);
     //   navigate('/')
     // } else {
     //   setMessage('user name or password is not valid')
     //   return false;
     // }
-  };
-  }
+
   const handleForgetPassword = (e) => {
   //   e.preventDefault();
   //   setMessage("📭 We send you and email to reset password")
@@ -125,6 +125,7 @@ function Login() {
       </div>
       <div onClick={handleForgetPassword} className='forgetPassword'>Forgot password</div>
       <div className='errorMessage'>{message}</div>
+  
     </div>
    
   );
