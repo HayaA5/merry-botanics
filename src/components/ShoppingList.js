@@ -25,7 +25,7 @@ function ShoppingList(){
 
 	useEffect(() => {
 		async function getPlantList(){
-			const response = await fetch(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`, {mode: 'no-cors'})
+			const response = await fetch(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`)
 			const data = await response.json()
 			setPlantList(data)
 	
