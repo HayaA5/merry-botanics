@@ -6,13 +6,13 @@ import { BrowserRouter , RouterProvider} from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <BrowserRouter>
-  <RouterProvider>
+  <BrowserRouter>
+   {/* <RouterProvider> */}
   <React.StrictMode>
     <App />
   </React.StrictMode>
-  {/* </BrowserRouter> */}
-  </RouterProvider>
+  </BrowserRouter>
+  // </RouterProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
