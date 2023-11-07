@@ -10,31 +10,25 @@ function ShoppingList(){
 	const [activeCategory, setActiveCategory] = useState('')
 	const [plantList, setPlantList]=useState([]);
 	
-  	// async function getPlantList(){
-	// 	const response = await fetch(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`)
-    //     const data = await response.json()
-    //     setPlantList(data)
+  	 function getPlantList(){
+		
+	 api.get(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`).then(res=>{setPlantList(res);})
+     }
 
-
-	// // api.get(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`)
-	// // .then(res=>{setPlantList(res);})
-    //  }
-
-   // useEffect(getPlantList,[]);
+   useEffect(getPlantList,[]);
 	
 
-	useEffect(() => {
-		async function getPlantList(){
-			const response = await fetch(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`)
-			const data = await response.json()
-			setPlantList(data)
+	// useEffect(() => {
+	// 	async function getPlantList(){
+	// 		const response = await fetch(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`)
+	// 		const data = await response.json()
+	// 		setPlantList(data)
 	
 	
-		// api.get(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`)
-		// .then(res=>{setPlantList(res);})
-		 }
-		 getPlantList();
-	  }, []); 
+	
+	// 	 }
+	// 	 getPlantList();
+	//   }, []); 
 
 	if( plantList.length==0) {
 		return   <Loader/>
