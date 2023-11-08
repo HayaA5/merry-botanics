@@ -11,26 +11,12 @@ function ShoppingList(){
 	const [plantList, setPlantList]=useState([]);
 	
   	 function getPlantList(){
-		
 	 api.get(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`).then(res=>{setPlantList(res);})
      }
 
    useEffect(getPlantList,[]);
-	
 
-	// useEffect(() => {
-	// 	async function getPlantList(){
-	// 		const response = await fetch(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`)
-	// 		const data = await response.json()
-	// 		setPlantList(data)
-	
-	
-	
-	// 	 }
-	// 	 getPlantList();
-	//   }, []); 
-
-	if( plantList.length==0) {
+	if( plantList.length===0) {
 		return   <Loader/>
 	}
 	const categories = plantList.reduce(
