@@ -5,7 +5,14 @@
 .mb-plant-list {
 	list-style-type: none;
 	padding: 32px;
-	display: flex;
-	flex-wrap: wrap;
+	display: flex; 
+	flex-wrap: wrap; 
 	justify-content: center;
 }
+
+@media (max-width: 600px) {
+	.mb-shopping-list {
+	  flex: 1 100%;
+	}
+  }
+

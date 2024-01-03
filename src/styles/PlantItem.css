@@ -2,17 +2,23 @@
 	height: 250px;
 	width: 250px;
 	border-radius: 20px;
-	object-fit: cover;
+	object-fit: contain;
+	/* width:30%; */
 }
 
+/* img{
+    width:30%;
+    object-fit: cover;
+} */
 .mb-plant-item {
 	margin: 10px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	text-transform: capitalize;
-	position: relative;
+	/* text-transform: capitalize; */
+	/* position: relative; */
+	/* width: 30%; */
 }
 
 .mb-plant-item-price {
@@ -48,3 +54,11 @@
 	cursor:auto;
 	background-color: grey;
 }
+/* @media (max-width: 600px) {
+	.mb-plant-item-cover {
+	  flex: 1 100%;
+	  width:500px;
+	  height:500px;
+	}
+	
+  } */

@@ -16,39 +16,27 @@ import styled from 'styled-components'
 
 function Header() {
   const [user,setUser] = useContext(UserContext);
-	return <div className='sticky'>
-    <div className='login-bar'>
-    {user.fullName ?<div className='userName'>Welcome {user.fullName} !</div>:<div></div> }
- 
-      {!user.fullName ?
-//  <StyledLink  to="/login" state={{cart:JSON.parse(localStorage.getItem('cart'))}}>login</StyledLink>:
- <StyledLink  to="/login" >login</StyledLink>:
+	return (
+  <div className='sticky'>
+        <div className='login-bar'>
+            {user.fullName ?<div className='userName'>Welcome {user.fullName} !</div>:<div></div> }
+        
+              {!user.fullName ?
+              <StyledLink  to="/login">login</StyledLink>:
+              <StyledLink to="/" onClick={() => {
+                                              setUser("");
+                                              localStorage.clear();}}
+                                  state={{logout: true}}>logout</StyledLink>
+              }
+        </div>
 
- <StyledLink
- to="/"
- onClick={() => {
-   setUser("");
-   localStorage.clear();
- }}
- state={{logout: true}}
->
-logout
- 
-</StyledLink>
-}
-</div>
-
-  <div className='mb-logo-title'>
-    
-		<img src={logo} alt='Merry Botanics' className='mb-logo' />
-				<h1 className='mb-title'>Merry Botanics</h1>
-			
-	  <div className='icon'>
-       
+      <div className='mb-logo-title'>
+        <img src={logo} alt='Merry Botanics' className='mb-logo' />
+            <h1 className='mb-title'>Merry Botanics</h1>
+            <div className='icon'></div>
       </div>
-	</div>
 
-  </div>
+  </div>)
 }
 
 export default Header

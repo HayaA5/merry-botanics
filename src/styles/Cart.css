@@ -64,3 +64,10 @@
 .message-login{
 	color:red;
 }
+@media (max-width: 600px) {
+     
+	.mb-cart{
+	  width:90%;
+
+	}
+}

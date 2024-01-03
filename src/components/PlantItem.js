@@ -32,7 +32,10 @@ useEffect(
 	return (
 		<li className='mb-plant-item'>
 			<span className='mb-plant-item-price'>{price}$</span>
+			{/* <div className='mb-plant-item-cover'> */}
 			<img className='mb-plant-item-cover' src={cover} alt={`${name} cover`} />
+			{/* <img src={cover} alt={`${name} cover`} /> */}
+			{/* </div> */}
 			{name}
 			<div>
 				<CareScale careType='water' scaleValue={water} key={`water ${water}`} />
