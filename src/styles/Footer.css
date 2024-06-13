@@ -8,61 +8,89 @@
 	align-items: center;
 	font-weight: 500;
 }
-label{
+
+label {
 	justify-content: right;
 }
+
 .mb-footer-elem {
 	margin-bottom: 10px;
 }
-  .mb-send-btn{
+
+.mb-send-btn {
 	height: 35px;
-	width:70px;
-	margin-left:10px;
+	width: 70px;
+	margin-left: 10px;
 	border-radius: 20px;
-	border:none;
-	background-color:rgba(49,181,114,1);
-	color:white;
-	text-align: center;
-	padding:5px;
+	border: none;
+	background-color: rgba(49, 181, 114, 1);
+	color: white;
+	padding: 5px;
 	justify-content: center;
+	align-items: center;
+	font-family: inherit;
+	display: flex;
+	gap: 2px;
+
 }
+
 .inputFooter {
-	width: 100%;
-	padding: 8px;
-	font-size: 13px;
+	/* width: 100%; */
+	padding: 2px 4px;
+	font-size: 1rem;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	height:15px;
-  }
-  .email{
+	/* height: 15px; */
+}
+
+.email {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-  }
-.inputFooter:not(:focus):invalid{
-	border: red 1px solid;
-} 
-.invalidMsg{
-    background-color:rgb(255, 166, 166);
-    color: white;
-    padding: 2px;
-	margin-left:10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.373);
-	justify-content: center;
-    align-items: center;
-	text-align: center;
-    font-size: 15px; 
 }
-.mb-send-btn:hover{
-	cursor:pointer;
+
+.inputFooter:not(:focus):invalid {
+	border: red 1px solid;
+}
+
+.invalidMsg {
+	background-color: rgb(255, 166, 166);
+	color: white;
+	padding: 2px;
+	/* margin-left: 10px; */
+	border-radius: 4px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.373);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1rem;
+
+}
+
+.mb-send-btn:hover {
+	cursor: pointer;
 	opacity: 0.8;
 }
-.btn-disabled{
+
+.btn-disabled {
 	background-color: grey;
 }
-.btn-disabled:hover{
-	cursor:auto;
+
+.btn-disabled:hover {
+	cursor: auto;
 	background-color: grey;
 	opacity: 1;
+}
+
+.sending-email-confirmation {
+	background-color: rgba(49, 181, 114, 1);
+	color: white;
+	padding: 2px;
+	/* margin-left: 10px; */
+	border-radius: 4px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.373);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 1rem;
 }

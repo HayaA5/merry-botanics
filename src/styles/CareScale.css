@@ -1,11 +1,13 @@
-.details-message{
-    font-size: 13px;
-    background-color:rgba(49,181,114,1);
-    color:white;
+.details-message {
+    font-size: 0.85rem;
+    background-color: rgba(49, 181, 114, 1);
+    color: white;
     border-radius: 25px;
-    padding: 0px 3px 0px 3px ;
+    padding: 0px 3px 0px 3px;
+    z-index: 99;
+    text-transform: none;
 }
 
-.quantity{
+.quantity {
     display: flex;
 }

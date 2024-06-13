@@ -1,51 +1,25 @@
-.fadeIn {
-    animation: 2s fadeIn forwards;
-  }
-  
-  /* .fadeOut {
-    animation: 0.5s fadeOut forwards;
-  }
-   */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translate(-50px, 0);
-    }
-    to {
-      opacity: 1;
-      transform: translate(0px, 0px);
-    }
-  }
-/*   
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-      transform: translate(0px, 0px);
-    }
-    to {
-      transform: translate(-20px, 0);
-      opacity: 0;
-    }
-  } */
+/* :root {
+  --base-font-size: 3em;
+} */
+body {
+  font-family: "Edu TAS Beginner", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 
-  /* @media (max-width: 1000px) {
-    .mb-plant-list {
-      flex: 1 55%;
-    }
-    } */
-    @media (max-width: 600px) {
-     
-      .mb-cart{
-        width:90%;
-        /* padding:0 20px; */
-        /* margin:20px; */
-      }
-      .mb-plant-list{
-        /* flex: 1 100%; */
-        /* width: 1000px;
-        height: 1000px; */
-        /* display: flex;
-        flex-direction: column; */
-      }
-   
-      }
+.fadeIn {
+  animation: 2s fadeIn forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}

@@ -1,7 +1,7 @@
 .mb-logo-title {
 	color: black;
 	text-align: right;
-	padding: 0px 32px;
+	padding: 10px 32px;
 	border-bottom: solid 3px black;
 	display: flex;
 	/* justify-content: flex-end; */
@@ -9,10 +9,14 @@
 	/* flex-direction: row; */
 	align-items: center;
 	background-color: white;
+	/* padding: 10px; */
 }
 
 .mb-title {
 	padding-left: 32px;
+	font-size: 2.5rem;
+	font-weight: 500;
+	color: #31b572;
 }
 
 .mb-logo {
@@ -23,27 +27,28 @@
 .iconlogin {
 	width: 40px;
 	height: 40px;
-  }
-  
-  .icon {
+}
+
+.icon {
 	margin-left: auto;
 	margin-right: auto;
 	/* justify-content: center; */
-  }
+}
 
-.login-bar{
+.login-bar {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	padding: 0px 10px 0px 10px;
-	background-color: rgba(49,181,114,1);
-	color:white;
-	font-size: 18px;
+	background-color: rgba(49, 181, 114, 1);
+	color: white;
+	font-size: 1.1rem;
 }
+
 .sticky {
 	position: sticky;
 	top: 0;
 	width: 100%;
 	opacity: 1;
-	z-index:1;
-  }
+	z-index: 1;
+}

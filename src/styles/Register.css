@@ -1,69 +1,96 @@
 .registration_container {
-    max-width: 400px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color:rgba(49,181,114,0.5);
-    border: 1px solid rgba(49,181,114,1);
-    border-radius: 4px;
-    position: relative;
-    top: 15%;
-    color:rgb(31, 94, 63);
-  }
-  
-  .registration_container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .form_group {
-    margin-bottom: 15px;
-  }
-  
-  .form_group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .form_group input {
-    width: 95%;
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 4px;
-  }
-  
-  .btn_register {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    text-align: center;
-    background-color:rgba(49,181,114,1);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn_register:hover {
-    background-color:rgba(49,181,114,0.8);
-  }
-  
-  .btn-disabled{
-    background-color: grey;
-  }
-  .btn-disabled:hover{
-    cursor:auto;
-    background-color: grey;
-  }
-  .errorMessage{
-    color:red;
-    height: 20px;
-  }
-  .notValid:not(:focus){
-    border: red 1px solid;
-  } 
-  .passwordContainer{
-    display:flex;
-    align-items: center;
-  }
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: rgba(49, 181, 114, 0.5);
+  border: 1px solid rgba(49, 181, 114, 1);
+  border-radius: 4px;
+  position: relative;
+  top: 15%;
+  color: rgb(31, 94, 63);
+}
+
+
+.register-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.form_group {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.form_group input {
+  width: 95%;
+  padding: 8px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn_register {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.4rem;
+  text-align: center;
+  background-color: rgba(49, 181, 114, 1);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+
+.btn_register:hover {
+  background-color: rgba(49, 181, 114, 0.8);
+}
+
+.btn-disabled {
+  background-color: grey;
+}
+
+.btn-disabled:hover {
+  cursor: auto;
+  background-color: grey;
+}
+
+.errorMessage {
+  color: red;
+  height: 20px;
+}
+
+.notValid:not(:focus) {
+  border: red 1px solid;
+}
+
+.passwordContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.eye-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  color: rgb(31, 94, 63);
+}
+
+.eye-icon:hover {
+  opacity: 0.7;
+}

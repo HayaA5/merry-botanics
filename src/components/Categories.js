@@ -7,7 +7,7 @@ function Categories({ setActiveCategory, categories, activeCategory }) {
 			<select
 				value={activeCategory}
 				onChange={(e) => setActiveCategory(e.target.value)}
-				className='mb-categories-select'				
+				className='mb-categories-select'
 			>
 				<option value='' className='option'>---</option>
 				{categories.map((cat) => (
@@ -17,7 +17,7 @@ function Categories({ setActiveCategory, categories, activeCategory }) {
 				))}
 			</select>
 
-			<button className='reset-btn' onClick={() => setActiveCategory('')}>Reset</button>
+			{/* <button className='reset-btn' onClick={() => setActiveCategory('')}>Reset</button> */}
 		</div>
 	)
 }
