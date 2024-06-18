@@ -1,6 +1,7 @@
 .login_container {
   max-width: 400px;
-  margin: auto;
+  /* max-height: 400px; */
+  margin: 5% auto 0 auto;
   padding: 20px;
   background-color: rgba(49, 181, 114, 0.5);
   border: 1px solid rgba(49, 181, 114, 1);
@@ -8,7 +9,7 @@
   color: rgb(31, 94, 63);
 }
 
-.login_container h2 {
+.login-title {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -16,11 +17,9 @@
 .form_group {
   margin-bottom: 15px;
   font-size: 1.2rem;
-
 }
 
-
-.form_group input {
+.form-input {
   width: 95%;
   padding: 8px;
   font-size: 1.2rem;
@@ -54,34 +53,20 @@
   right: 0;
 }
 
-.forgetPassword {
-  cursor: pointer;
-}
-
 .errorMessage {
   color: red;
   height: 20px;
 }
-
-label {
-  display: flex;
-  align-items: center;
-  /* position: relative; */
-}
-
 
 .passwordContainer {
   display: flex;
   align-items: center;
   /* background-color: white; */
   position: relative;
-
 }
 
 .eye-icon {
   cursor: pointer;
-  /* background-color: white;
-  height: 100%; */
   position: absolute;
   right: 30px;
   top: 8px;

@@ -1,7 +1,9 @@
 .registration_container {
   max-width: 400px;
-  margin: auto;
+  /* margin: auto; */
+  margin: 1% auto 1% auto;
   padding: 20px;
+  box-sizing: border-box;
   background-color: rgba(49, 181, 114, 0.5);
   border: 1px solid rgba(49, 181, 114, 1);
   border-radius: 4px;
@@ -9,7 +11,6 @@
   top: 15%;
   color: rgb(31, 94, 63);
 }
-
 
 .register-title {
   text-align: center;
@@ -29,7 +30,7 @@
   font-weight: 400;
 }
 
-.form_group input {
+.form-input {
   width: 95%;
   padding: 8px;
   font-size: 1.2rem;
@@ -51,18 +52,8 @@
   font-family: inherit;
 }
 
-
 .btn_register:hover {
   background-color: rgba(49, 181, 114, 0.8);
-}
-
-.btn-disabled {
-  background-color: grey;
-}
-
-.btn-disabled:hover {
-  cursor: auto;
-  background-color: grey;
 }
 
 .errorMessage {
@@ -79,7 +70,6 @@
   align-items: center;
   position: relative;
 }
-
 
 .eye-icon {
   cursor: pointer;

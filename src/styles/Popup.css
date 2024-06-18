@@ -17,28 +17,29 @@
 }
 
 .popup {
-    /* padding: 10px;
-    border-radius: 10px;
-    overflow-y: auto;
-    height: 100vw;
-    position: fixed;
-    z-index: 11; */
-    top: 20%;
-    left: 20%;
-    /* margin: auto auto; */
-    width: 60%;
-    /* height: 200px; */
-    /* line-height: 200px; */
     position: sticky;
+    margin: auto auto;
 
-    /* left: 50%; */
-    /* margin-top: -100px;
-    margin-left: -150px; */
-    /* background-color: #f1c40f; */
+    /* top: 0;
+    left: 50%; */
+
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
     border-radius: 5px;
-    /* text-align: center; */
     z-index: 2;
+    /* border: green solid 2px; */
+    width: 400px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    width: 50%;
+    z-index: 2; */
 }
+
 
 /* body {
     overflow: hidden;

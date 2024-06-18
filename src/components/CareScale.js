@@ -1,4 +1,4 @@
-import {useState } from 'react'
+import { useState } from 'react'
 import Sun from '../assets/sun.svg'
 import Water from '../assets/water.svg'
 import '../styles/CareScale.css'
@@ -10,7 +10,8 @@ const quantityLabel = {
 }
 
 function CareScale({ scaleValue, careType }) {
-	const [isHovered, setIsHovered]=useState(false);
+	const [isHovered, setIsHovered] = useState(false);
+
 	const range = [1, 2, 3]
 	const scaleType =
 		careType === 'light' ? (
@@ -18,26 +19,26 @@ function CareScale({ scaleValue, careType }) {
 		) : (
 			<img src={Water} alt='water-icon' />
 		)
-	
-	const tooltipContent=`This plant needs ${quantityLabel[scaleValue]} ${
-		careType === 'light' ? 'light' : "watering"
-	}`
-	
+
+	const tooltipContent = `This plant needs ${quantityLabel[scaleValue]} ${careType === 'light' ? 'light' : "watering"
+		}`
+
 	const handleOnMouseLeave = () => {
 		setIsHovered(false);
 	};
 	const handleOnMouseEnter = () => {
 		setIsHovered(true);
+		setTimeout(() => setIsHovered(false), 1500)
 	};
 
 	return (
 		<div className='quantity' onMouseOver={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
 			{range.map((rangeElem) =>
 				scaleValue >= rangeElem ? (
-					<span key={rangeElem.toString()+careType} className='spann'  >{scaleType} </span> 
+					<span key={rangeElem.toString() + careType} className='spann'  >{scaleType} </span>
 				) : null
 			)}
-			{isHovered ? <div className='details-message'>{tooltipContent}</div>:null}
+			{isHovered ? <div className='carescale-details-message'>{tooltipContent}</div> : null}
 		</div>
 	)
 }

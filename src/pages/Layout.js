@@ -9,11 +9,9 @@ import { Popup2Provider } from '../contexts/PopupContext'
 import Popup from '../components/Popup'
 
 function Layout() {
-
 	//const location = useLocation();
 	// let cartFromLocalStorage = location.state?.cart;
 	// let logout = location.state?.logout;
-
 
 	return (
 		<div>

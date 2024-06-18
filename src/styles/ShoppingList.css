@@ -1,6 +1,5 @@
 .mb-shopping-list {
 	width: 100%;
-	/* background: linear-gradient(0.25turn, #dbf5dd, #c3f5ce); */
 }
 
 .mb-plant-list {
@@ -9,7 +8,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-
 }
 
 .filters {
@@ -19,10 +17,9 @@
 	flex-direction: row;
 }
 
-label {
+.shopping-list-label {
 	display: flex;
 	position: relative;
-	/* margin-bottom: 2rem; */
 }
 
 .input-search {
@@ -32,24 +29,10 @@ label {
 	padding: 6px 2px;
 	text-align: center;
 	text-overflow: ellipsis;
-	/* box-sizing: border-box; */
-	/* background-position: 10px 10px; */
-	/* background-repeat: no-repeat; */
 	padding: 5px 20px;
 	margin-right: 20px;
 	background-color: rgba(49, 181, 114, 1);
 	color: white;
-	/* maxLength={7} size={7}  */
-	/* width: 100%;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px; */
 }
 
 .search-icon {
@@ -65,8 +48,17 @@ label {
 	outline: none;
 }
 
+.one-plant-item {
+	margin-bottom: 40px;
+}
+
 @media (max-width: 600px) {
 	.mb-shopping-list {
 		flex: 1 100%;
+	}
+
+	.one-plant-item {
+		width: 100%;
+		height: 100%;
 	}
 }

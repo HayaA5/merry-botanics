@@ -9,12 +9,9 @@
 	font-weight: 500;
 }
 
-label {
-	justify-content: right;
-}
-
 .mb-footer-elem {
 	margin-bottom: 10px;
+	justify-content: right;
 }
 
 .mb-send-btn {
@@ -31,7 +28,10 @@ label {
 	font-family: inherit;
 	display: flex;
 	gap: 2px;
+}
 
+.mb-send-btn:active {
+	scale: 0.95;
 }
 
 .inputFooter {
@@ -64,7 +64,6 @@ label {
 	align-items: center;
 	text-align: center;
 	font-size: 1rem;
-
 }
 
 .mb-send-btn:hover {
@@ -86,7 +85,6 @@ label {
 	background-color: rgba(49, 181, 114, 1);
 	color: white;
 	padding: 2px;
-	/* margin-left: 10px; */
 	border-radius: 4px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.373);
 	justify-content: center;

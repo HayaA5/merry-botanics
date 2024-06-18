@@ -52,7 +52,6 @@ function Register() {
                 }, 1500)
             }
         })
-
     }
 
     const checkPasswords = () => {
@@ -74,6 +73,7 @@ function Register() {
                         onChange={handleChange}
                         maxLength={15}
                         required
+                        className='form-input'
                     />
                 </div>
                 <div className='form_group'>
@@ -87,6 +87,7 @@ function Register() {
                         onChange={handleChange}
                         maxLength={20}
                         required
+                        className='form-input'
                     />
                 </div>
                 <div className='form_group'>
@@ -97,7 +98,7 @@ function Register() {
                             id="password"
                             name="password"
                             placeholder="choose a password"
-                            className={` ${passwordSame ? '' : 'notValid'}`}
+                            className={`form-input ${passwordSame ? '' : 'notValid'}`}
                             value={formData.password}
                             onChange={handleChange}
                             onBlur={checkPasswords}
@@ -116,7 +117,7 @@ function Register() {
                             id="confirmPassword"
                             name="confirmPassword"
                             placeholder="confirm the password"
-                            className={` ${passwordSame ? '' : 'notValid'}`}
+                            className={`form-input ${passwordSame ? '' : 'notValid'}`}
 
                             value={formData.confirmPassword}
                             onChange={handleChange}
@@ -127,7 +128,6 @@ function Register() {
                         <AiOutlineEye className='eye-icon' onClick={() => { setDisplayPasswordVer(!displayPasswordVer) }} />
                     </div>
                 </div>
-                {/* <button type="submit" className={`btn_register ${password!==passwordVerification? 'btn-disabled':''}`} disabled={password!==passwordVerification}>Register</button> */}
                 <button type="submit" className='btn_register'>Register</button>
 
             </form>

@@ -3,8 +3,6 @@
 	width: 250px;
 	border-radius: 20px;
 	object-fit: cover;
-	/* border: 1px solid black; */
-	/* width:30%; */
 }
 
 .plant-description {
@@ -13,10 +11,6 @@
 	border-radius: 20px;
 	background-color: #31b472;
 	color: white;
-	/* display: block;
-	margin: auto; */
-	/* margin: auto auto;
-	align-items: center; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -24,20 +18,19 @@
 	box-sizing: border-box;
 }
 
-/* img{
-    width:30%;
-    object-fit: cover;
-} */
 .mb-plant-item {
 	margin: 10px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
-	text-transform: capitalize;
 	position: relative;
 	font-size: 1.2rem;
 	/* width: 30%; */
+}
+
+.mb-plant-item-name {
+	text-transform: capitalize;
 }
 
 .mb-plant-item-price {
@@ -53,55 +46,28 @@
 
 .mb-btn {
 	display: inline-block;
-	/* height: 25px;
-	width: 50px; */
 	border-radius: 15px;
 	border: none;
 	background-color: rgba(49, 181, 114, 1);
-
-	/* text-align: center; */
-	padding: 0 7px;
+	padding: 0 12px;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-family: inherit;
 	font-size: inherit;
 	text-align: center;
-	/* margin: auto; */
-	display: flex;
 	cursor: pointer;
 	text-align: center;
 	color: white;
 }
 
 .mb-add-btn {
-
-	/* align-items: center; */
-
-	/* addd */
-	/* transform: scale(var(--scale, 1));
-	transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.27);
-	-webkit-appearance: none;
-	-webkit-tap-highlight-color: transparent;
 	-webkit-mask-image: -webkit-radial-gradient(white, black);
-	overflow: hidden;
-	cursor: pointer; */
-
-	/* -webkit-appearance: none; */
-	/* -webkit-tap-highlight-color: transparent; */
-	-webkit-mask-image: -webkit-radial-gradient(white, black);
-	/* overflow: hidden; */
-
-	/* min-width: 144px; */
-	/* color: var(--text); */
-	/* background: var(--background); */
 	transform: scale(var(--scale, 1));
 	transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.27);
-
 }
 
 .mb-btn:hover {
-	/* background-color: rgba(49, 181, 114, 0.8);
-	cursor: pointer; */
 	opacity: 0.7;
 }
 
@@ -114,41 +80,35 @@
 	background-color: grey;
 }
 
+.btns-container {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.price-is-hovered {
+	background-color: white;
+	color: #31b472;
+}
 
 @media (max-width: 600px) {
 
 	.mb-plant-item-cover,
-	.mb-plant-item,
 	.plant-description {
-		/* border: 1px black solid; */
-		/* margin-top: 50px; */
-		/* flex: 1 100%; */
 		width: 100%;
-		height: 100%;
+		height: 70vh;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		/* margin: 0;
-		padding: 0; */
-	}
-
-	.mb-plant-item-cover {
 		object-fit: cover;
 	}
-
-	/* * {
-		background-color: lightblue;
-	} */
 }
 
 /* ---------- */
 
 
-
-.mb-add-btn:active {
-	--scale: 0.95;
+.mb-btn:active {
+	scale: 0.95;
+	/* --scale: 0.95; */
 }
 
 .mb-add-btn span {
@@ -156,12 +116,12 @@
 	transition: transform 0.7s ease;
 }
 
-.mb-add-btn span:after {
+/* .mb-add-btn span:after {
 	--w: 14px;
 	--h: 2px;
 	--l: 2px;
 	--t: 12px;
-}
+} */
 
 .mb-add-btn .cart {
 	position: absolute;
@@ -256,11 +216,4 @@
 	100% {
 		transform: translateX(140px) rotate(-18deg);
 	}
-}
-
-.btns-container {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	/* border: 1px solid black; */
 }

@@ -1,7 +1,6 @@
 import '../styles/Categories.css'
 
 function Categories({ setActiveCategory, categories, activeCategory }) {
-
 	return (
 		<div className='mb-categories'>
 			<select
@@ -16,8 +15,6 @@ function Categories({ setActiveCategory, categories, activeCategory }) {
 					</option>
 				))}
 			</select>
-
-			{/* <button className='reset-btn' onClick={() => setActiveCategory('')}>Reset</button> */}
 		</div>
 	)
 }
