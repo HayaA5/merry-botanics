@@ -82,4 +82,8 @@ input[type=number]::-webkit-outer-spin-button {
 	.mb-cart {
 		width: 100%;
 	}
+
+	.mb-cart-toggle-button {
+		padding-right: 20px;
+	}
 }
