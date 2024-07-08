@@ -13,9 +13,11 @@ function ShoppingList() {
 	const [fiteredPlantList, setFilteredPlantList] = useState([]);
 
 	function getPlantList() {
+
 		api.get(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`).then(res => {
 			setPlantList(res);
 			setFilteredPlantList(res);
+			console.log(res)
 		})
 	}
 

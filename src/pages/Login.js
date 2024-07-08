@@ -77,6 +77,7 @@ function Login() {
                 value={formData.password}
                 onChange={handleChange}
                 maxLength={10}
+                className='form-input'
                 required
               />
               <AiOutlineEye className='eye-icon' onClick={() => { setDisplayPassword(!displayPassword) }} />

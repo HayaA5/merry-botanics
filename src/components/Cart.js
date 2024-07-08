@@ -82,6 +82,7 @@ function Cart() {
 			</button>
 		</div>
 	)
+
 }
 
 export default Cart
