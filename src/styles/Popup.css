@@ -6,10 +6,6 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-
 }
 
 .overlay.close {
@@ -19,28 +15,11 @@
 .popup {
     position: sticky;
     margin: auto auto;
-
-    /* top: 0;
-    left: 50%; */
-
     position: sticky;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     border-radius: 5px;
     z-index: 2;
-    /* border: green solid 2px; */
     width: 400px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    width: 50%;
-    z-index: 2; */
 }
-
-
-/* body {
-    overflow: hidden;
-} */

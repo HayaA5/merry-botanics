@@ -3,7 +3,6 @@
 	padding: 32px;
 	border-top: solid 3px black;
 	display: flex;
-	/* justify-content: flex-start; */
 	flex-direction: column;
 	align-items: center;
 	font-weight: 500;
@@ -35,12 +34,10 @@
 }
 
 .inputFooter {
-	/* width: 100%; */
 	padding: 2px 4px;
 	font-size: 1rem;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	/* height: 15px; */
 }
 
 .email {
@@ -57,7 +54,6 @@
 	background-color: rgb(255, 166, 166);
 	color: white;
 	padding: 2px;
-	/* margin-left: 10px; */
 	border-radius: 4px;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.373);
 	justify-content: center;

@@ -26,7 +26,6 @@
 	flex-direction: column;
 	position: relative;
 	font-size: 1.2rem;
-	/* width: 30%; */
 }
 
 .mb-plant-item-name {
@@ -91,37 +90,14 @@
 	color: #31b472;
 }
 
-@media (max-width: 600px) {
-
-	.mb-plant-item-cover,
-	.plant-description {
-		width: 100%;
-		height: 70vh;
-		display: flex;
-		flex-direction: column;
-		object-fit: cover;
-	}
-}
-
-/* ---------- */
-
-
 .mb-btn:active {
 	scale: 0.95;
-	/* --scale: 0.95; */
 }
 
 .mb-add-btn span {
 	transform: translateY(var(--span-y, 0));
 	transition: transform 0.7s ease;
 }
-
-/* .mb-add-btn span:after {
-	--w: 14px;
-	--h: 2px;
-	--l: 2px;
-	--t: 12px;
-} */
 
 .mb-add-btn .cart {
 	position: absolute;
@@ -131,7 +107,6 @@
 	transform-origin: 12px 23px;
 	transform: translateX(-120px) rotate(-18deg);
 }
-
 
 .mb-add-btn.loading {
 	--scale: 0.95;
@@ -215,5 +190,17 @@
 
 	100% {
 		transform: translateX(140px) rotate(-18deg);
+	}
+}
+
+@media (max-width: 600px) {
+
+	.mb-plant-item-cover,
+	.plant-description {
+		width: 100%;
+		height: 70vh;
+		display: flex;
+		flex-direction: column;
+		object-fit: cover;
 	}
 }

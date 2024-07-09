@@ -2,11 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: red solid 1px; */
     left: 50%;
     width: 400px;
     height: 400px;
-    /* margin: auto; */
 }
 
 .image {

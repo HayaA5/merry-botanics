@@ -8,8 +8,6 @@ export default function Popup() {
     return <div
         className={`overlay ${popup ? '' : 'close'}`}
         onClick={(e) => {
-            // console.log('tar--', e.target);
-            // console.log('currTar', e.currentTarget)
             if (e.target === e.currentTarget) {
                 setPopup('')
             }

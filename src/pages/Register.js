@@ -42,7 +42,6 @@ function Register() {
         }
 
         api.post(url, data).then(data => {
-
             if (data.code == 200) {
                 navigate('/login');
             } else {

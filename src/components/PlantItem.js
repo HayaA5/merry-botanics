@@ -18,8 +18,8 @@ function PlantItem({ cover, name, water, light, price, barcode, stock, stockReal
 	};
 
 	const handleOnMouseEnter = (e) => {
-		// console.log(e)
 		setImageHovered(true);
+		setTimeout(() => setImageHovered(false), 5000)
 	};
 
 	useEffect(
@@ -41,8 +41,7 @@ function PlantItem({ cover, name, water, light, price, barcode, stock, stockReal
 			updateCart([...cart, { barcode, name, price, amount: 1, stock, cover }])
 		}
 	}
-	// onMouseEnter={() => setVisible(true)}
-	// onMouseLeave=
+
 	return (
 		<li className='mb-plant-item'>
 			<span className={`mb-plant-item-price ${imageHovered && 'price-is-hovered'}`}>{price}$</span>

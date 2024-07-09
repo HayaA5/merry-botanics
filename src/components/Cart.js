@@ -5,8 +5,8 @@ import { useLocation } from 'react-router-dom';
 import Payment from './Payment';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import '../styles/Cart.css'
-// import { Tooltip } from 'react-tooltip'
 import CartItem from './CartItem';
+
 //function Cart({cartLS,logout}){
 function Cart() {
 	const location = useLocation();
@@ -64,7 +64,7 @@ function Cart() {
 					</ul>
 					<h3>Total :{total}$</h3>
 					<div className='cart-btns-container'>
-						<button className='cart-btn' onClick={() => updateCart([])}>Empty cart</button>
+						<button className='cart-btn empty' onClick={() => updateCart([])}>Empty cart</button>
 						<Payment cart={cart} />
 					</div>
 				</div>

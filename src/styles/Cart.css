@@ -5,10 +5,8 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	/* width: 300px; */
 	width: 40%;
 	font-size: 1.5rem;
-	/* border: 2px red solid; */
 }
 
 .mb-cart-toggle-button {
@@ -25,13 +23,15 @@
 	font-weight: 400;
 }
 
+.mb-cart-toggle-button:active {
+	scale: 0.95;
+}
+
 .mb-cart-closed {
 	padding: 32px;
 	width: 40px;
-	/* width: 300px; */
 }
 
-/* .mb-cart-closed>button  */
 .closed {
 	color: black;
 }
@@ -46,13 +46,16 @@
 	padding: 0px 5px;
 	justify-content: center;
 	align-items: center;
-	margin-left: 10px;
 	font-family: inherit;
 }
 
 .cart-btn:hover {
 	cursor: pointer;
 	opacity: 0.8;
+}
+
+.cart-btn:active {
+	scale: 0.95;
 }
 
 /* will be removed when we will allow persons to command without login */
@@ -69,12 +72,6 @@
 	justify-content: space-between;
 }
 
-/* label {
-	display: flex;
-	position: relative;
-} */
-
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
 	opacity: 1;
@@ -88,4 +85,8 @@ input[type=number]::-webkit-outer-spin-button {
 	.mb-cart-toggle-button {
 		padding-right: 20px;
 	}
+}
+
+.empty {
+	margin-top: 30px;
 }

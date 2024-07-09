@@ -13,11 +13,9 @@ function ShoppingList() {
 	const [fiteredPlantList, setFilteredPlantList] = useState([]);
 
 	function getPlantList() {
-
 		api.get(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`).then(res => {
 			setPlantList(res);
 			setFilteredPlantList(res);
-			// console.log(res)
 		})
 	}
 
@@ -26,8 +24,7 @@ function ShoppingList() {
 	if (plantList.length === 0) {
 		return <Loader />
 	}
-	const allImages = plantList.map(plant => plant.cover)
-	// console.log('all', allImages)
+
 	const categories = plantList.reduce(
 		(acc, plant) =>
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),

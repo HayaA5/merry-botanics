@@ -12,8 +12,8 @@ function CartItem({ name, index, price, amount, stock, cover }) {
     };
     const handleOnMouseEnter = () => {
         setIsHovered(true);
-        // setTimeout(() => setIsHovered(false), 1500)
     };
+
     function removeFromCart(name) {
         const cartFilteredCurrentPlant = cart.filter(
             (plant) => plant.name !== name
@@ -22,14 +22,13 @@ function CartItem({ name, index, price, amount, stock, cover }) {
             ...cartFilteredCurrentPlant
         ])
     }
+
     function updateQtyInCart(e, name) {
-        // const value = e.target.value
         if (Number(e.target.value) === 0) {
             removeFromCart(name)
         } else {
             updateCart(cart.map(plant => plant.name === name ? { ...plant, amount: e.target.value } : plant))
         }
-
     }
 
     return (
@@ -38,13 +37,10 @@ function CartItem({ name, index, price, amount, stock, cover }) {
                 <div className="one-article-info">
                     <img src={cover} className="one-article-img" />
                     {name}
-                    {/* {price}$ x */}
                     <input type='number' className='input-qty' min={0} max={stock} onKeyDown={(e) => e.preventDefault()}
                         onChange={(e) => updateQtyInCart(e, name)} value={amount} />
                 </div>
-
                 <div className="one-article-total">{amount * price}$</div>
-
             </div>
             <div className='close-icon-container'
                 onMouseOver={handleOnMouseEnter}
