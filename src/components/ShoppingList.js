@@ -17,7 +17,7 @@ function ShoppingList() {
 		api.get(`${process.env.REACT_APP_BASE_PATH}/api/items/allitems`).then(res => {
 			setPlantList(res);
 			setFilteredPlantList(res);
-			console.log(res)
+			// console.log(res)
 		})
 	}
 
@@ -27,7 +27,7 @@ function ShoppingList() {
 		return <Loader />
 	}
 	const allImages = plantList.map(plant => plant.cover)
-
+	// console.log('all', allImages)
 	const categories = plantList.reduce(
 		(acc, plant) =>
 			acc.includes(plant.category) ? acc : acc.concat(plant.category),
@@ -52,7 +52,7 @@ function ShoppingList() {
 			</div>
 			<ul className='mb-plant-list'>
 				{fiteredPlantList.map((
-					{ barcode, cover, name, water, light, price, category, stock, stockReal = stock, description }) =>
+					{ barcode, cover, name, water, light, price, category, stock, stockReal = stock, description, images_gallery }) =>
 					!activeCategory || activeCategory === category ? (
 						<div key={barcode} className='one-plant-item'>
 							<PlantItem
@@ -64,7 +64,7 @@ function ShoppingList() {
 								barcode={barcode}
 								stock={stock}
 								description={description}
-								images={allImages}
+								images_gallery={images_gallery}
 							/>
 						</div>
 					) : null

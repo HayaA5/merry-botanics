@@ -6,16 +6,19 @@ import { PopupContext2 } from '../contexts/PopupContext';
 import PlantGallery from './PlantGallery';
 import '../styles/PlantItem.css'
 
-function PlantItem({ cover, name, water, light, price, barcode, stock, stockReal, description, images }) {
+function PlantItem({ cover, name, water, light, price, barcode, stock, stockReal, description, images_gallery }) {
 	const [actualStock, setActualStock] = useState(stockReal);
 	const [cart, updateCart] = useContext(CartContext);
 	const [imageHovered, setImageHovered] = useState(false);
 	const [loading, setLoading] = useState(false)
 	const { popup, setPopup } = useContext(PopupContext2)
+
 	const handleOnMouseLeave = () => {
 		setImageHovered(false);
 	};
-	const handleOnMouseEnter = () => {
+
+	const handleOnMouseEnter = (e) => {
+		// console.log(e)
 		setImageHovered(true);
 	};
 
@@ -38,7 +41,8 @@ function PlantItem({ cover, name, water, light, price, barcode, stock, stockReal
 			updateCart([...cart, { barcode, name, price, amount: 1, stock, cover }])
 		}
 	}
-
+	// onMouseEnter={() => setVisible(true)}
+	// onMouseLeave=
 	return (
 		<li className='mb-plant-item'>
 			<span className={`mb-plant-item-price ${imageHovered && 'price-is-hovered'}`}>{price}$</span>
@@ -47,7 +51,7 @@ function PlantItem({ cover, name, water, light, price, barcode, stock, stockReal
 				<div className='plant-description' onMouseLeave={handleOnMouseLeave}>{description}</div>
 				:
 				<img className='mb-plant-item-cover' src={cover} alt={`${name} cover`}
-					onMouseOver={handleOnMouseEnter} />
+					onMouseEnter={handleOnMouseEnter} />
 			}
 			<div className='mb-plant-item-name'>
 				{name}
@@ -71,7 +75,7 @@ function PlantItem({ cover, name, water, light, price, barcode, stock, stockReal
 					</div>
 				</button>
 				<button className='mb-btn' onClick={() => setPopup(
-					<PlantGallery images={images} />
+					<PlantGallery images={images_gallery} />
 				)}><span>More images</span></button>
 			</div>
 		</li>

@@ -15,18 +15,18 @@ function Layout() {
 
 	return (
 		<div>
-			{/* <Popup2Provider> */}
-			<Header />
-			<CartProvider>
-				<div className='mb-layout-inner'>
-					{/* <Cart cartLS={cartFromLocalStorage} logout={logout}/> */}
-					<Cart />
-					<ShoppingList />
-				</div>
-			</CartProvider>
-			<Popup />
-			<Footer />
-			{/* </Popup2Provider> */}
+			<Popup2Provider>
+				<Header />
+				<CartProvider>
+					<div className='mb-layout-inner'>
+						{/* <Cart cartLS={cartFromLocalStorage} logout={logout}/> */}
+						<Cart />
+						<ShoppingList />
+					</div>
+				</CartProvider>
+				<Popup />
+				<Footer />
+			</Popup2Provider>
 		</div>
 	)
 }
