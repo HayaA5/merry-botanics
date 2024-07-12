@@ -39,8 +39,8 @@ function Footer() {
 			<label htmlFor='mail' className='mb-footer-elem'>Enter your email :</label>
 			<div className='email'>
 
-				<input className="inputFooter"
-					placeholder='enter your email'
+				<input className="input-footer"
+					placeholder='david@gmail.com'
 					onBlur={handleBlur}
 					type='email'
 					name='mail'

@@ -14,11 +14,63 @@
 	font-size: 2.5rem;
 	font-weight: 500;
 	color: #31b572;
+	animation: text-color 6s forwards, display-txt 6s ease-out 0s 1 reverse;
+	/* animation: display-txt 6s ease-out 0s 1 reverse; */
+	/* animation: typing 4s 0s forwards; */
+	/* , blink-caret .75s step-end infinite; */
+}
+
+@keyframes display-txt {
+	from {
+		width: 20%;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+/* The typewriter cursor effect */
+/* @keyframes blink-caret {
+
+	from,
+	to {
+		border-color: transparent
+	}
+
+	50% {
+		border-color: orange;
+	}
+} */
+
+@keyframes text-color {
+	0% {
+		/* bottom: -0.2em; */
+		/* opacity: 1; */
+		color: #87ebb9;
+		opacity: 0.1;
+		/* width: 0; */
+	}
+
+	50% {
+		/* bottom: 0.2em; */
+		color: #02311a;
+		opacity: 0.5;
+	}
+
+	100% {
+		/* bottom: 0; */
+		/* opacity: 1; */
+		color: #31b572;
+		opacity: 1;
+		/* width: 100%; */
+	}
 }
 
 .mb-logo {
 	height: 45px;
 	width: 45px;
+	animation: rotate2 2s 2 linear;
 }
 
 .icon {
@@ -42,4 +94,14 @@
 	width: 100%;
 	opacity: 1;
 	z-index: 1;
+}
+
+@keyframes rotate2 {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
 }

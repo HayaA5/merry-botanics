@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../functions/API_Calls/apiCalls';
 import { Link } from 'react-router-dom';
-import { AiOutlineEye } from 'react-icons/ai'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
 function Register() {
     document.title = 'Register'
@@ -24,6 +24,8 @@ function Register() {
     }
 
     const handleSubmit = (e) => {
+        debugger;
+        console.log('-----')
         e.preventDefault();
         if (e.currentTarget.password.value !== e.currentTarget.confirmPassword.value) {
             setMessage("passwords are different")
@@ -36,7 +38,7 @@ function Register() {
         const url = "/users/register"
 
         const data = {
-            fullName: e.currentTarget.username.value,
+            fullName: e.currentTarget.name.value,
             email: e.currentTarget.email.value,
             password: e.currentTarget.password.value
         }
@@ -67,7 +69,7 @@ function Register() {
                         type="text"
                         id="name"
                         name="name"
-                        placeholder="user name"
+                        placeholder="David"
                         value={formData.name}
                         onChange={handleChange}
                         maxLength={15}
@@ -81,10 +83,10 @@ function Register() {
                         type="email"
                         id="email"
                         name="email"
-                        placeholder="email"
+                        placeholder="david@gmail.com"
                         value={formData.email}
                         onChange={handleChange}
-                        maxLength={20}
+                        maxLength={30}
                         required
                         className='form-input'
                     />
@@ -96,7 +98,7 @@ function Register() {
                             type={displayPassword ? "text" : "password"}
                             id="password"
                             name="password"
-                            placeholder="choose a password"
+                            // placeholder="choose a password"
                             className={`form-input ${passwordSame ? '' : 'notValid'}`}
                             value={formData.password}
                             onChange={handleChange}
@@ -104,7 +106,7 @@ function Register() {
                             maxLength={10}
                             required
                         />
-                        <AiOutlineEye className='eye-icon' onClick={() => { setDisplayPassword(!displayPassword); }} />
+                        {displayPassword ? <AiOutlineEyeInvisible className='eye-icon' onClick={() => { setDisplayPassword(!displayPassword); }} /> : <AiOutlineEye className='eye-icon' onClick={() => { setDisplayPassword(!displayPassword); }} />}
                     </div>
                 </div>
 
@@ -115,7 +117,7 @@ function Register() {
                             type={displayPasswordVer ? "text" : "password"}
                             id="confirmPassword"
                             name="confirmPassword"
-                            placeholder="confirm the password"
+                            // placeholder="confirm the password"
                             className={`form-input ${passwordSame ? '' : 'notValid'}`}
 
                             value={formData.confirmPassword}
@@ -124,7 +126,7 @@ function Register() {
                             maxLength={10}
                             required
                         />
-                        <AiOutlineEye className='eye-icon' onClick={() => { setDisplayPasswordVer(!displayPasswordVer) }} />
+                        {displayPasswordVer ? <AiOutlineEyeInvisible className='eye-icon' onClick={() => { setDisplayPasswordVer(!displayPasswordVer); }} /> : <AiOutlineEye className='eye-icon' onClick={() => setDisplayPasswordVer(!displayPasswordVer)} />}
                     </div>
                 </div>
                 <button type="submit" className='btn_register'>Register</button>

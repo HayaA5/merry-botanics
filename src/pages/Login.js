@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import api from '../functions/API_Calls/apiCalls';
 import '../styles/Login.css'
 import { UserContext } from '../contexts/UserContext'
-import { AiOutlineEye } from 'react-icons/ai'
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai'
 
 function Login() {
   document.title = 'Login'
@@ -23,6 +23,7 @@ function Login() {
   }
 
   const handleSubmit = (e) => {
+    console.log('--------')
     e.preventDefault();
     const url = "/users/login"
     const data = {
@@ -58,7 +59,7 @@ function Login() {
             type="email"
             id="email"
             name="email"
-            placeholder="email"
+            placeholder="david@gmail.com"
             value={formData.email}
             onChange={handleChange}
             required
@@ -73,14 +74,14 @@ function Login() {
                 type={displayPassword ? "text" : "password"}
                 id="password"
                 name="password"
-                placeholder="password"
+                // placeholder="aaa"
                 value={formData.password}
                 onChange={handleChange}
                 maxLength={10}
                 className='form-input'
                 required
               />
-              <AiOutlineEye className='eye-icon' onClick={() => { setDisplayPassword(!displayPassword) }} />
+              {displayPassword ? <AiOutlineEyeInvisible className='eye-icon' onClick={() => { setDisplayPassword(!displayPassword) }} /> : <AiOutlineEye className='eye-icon' onClick={() => { setDisplayPassword(!displayPassword) }} />}
             </div>
           </label>
         </div>

@@ -2,6 +2,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useState, useContext } from 'react'
 import { CartContext } from '../contexts/CartContext';
 import '../styles/CartItem.css'
+import { CiTrash } from "react-icons/ci";
 
 function CartItem({ name, index, price, amount, stock, cover }) {
     const [isHovered, setIsHovered] = useState(false);
@@ -45,9 +46,10 @@ function CartItem({ name, index, price, amount, stock, cover }) {
             <div className='close-icon-container'
                 onMouseOver={handleOnMouseEnter}
                 onMouseLeave={handleOnMouseLeave}>
-                <AiOutlineClose className='close-icon'
+                <CiTrash className='empty-cart-icon' onClick={() => removeFromCart(name)} />
+                {/* <AiOutlineClose className='close-icon'
                     onClick={() => removeFromCart(name)}
-                />
+                /> */}
                 <div className={`cart-details-message ${isHovered ? '' : 'invisible'}`}>remove</div>
             </div>
         </div>

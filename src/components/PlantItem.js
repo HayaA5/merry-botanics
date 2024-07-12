@@ -45,12 +45,13 @@ function PlantItem({ cover, name, water, light, price, barcode, stock, stockReal
 	return (
 		<li className='mb-plant-item'>
 			<span className={`mb-plant-item-price ${imageHovered && 'price-is-hovered'}`}>{price}$</span>
+
 			{imageHovered
 				?
 				<div className='plant-description' onMouseLeave={handleOnMouseLeave}>{description}</div>
 				:
-				<img className='mb-plant-item-cover' src={cover} alt={`${name} cover`}
-					onMouseEnter={handleOnMouseEnter} />
+				<><img className={`mb-plant-item-cover ${actualStock === 0 ? 'img-sold-out' : ''}`} src={cover} alt={`${name} cover`}
+					onMouseEnter={handleOnMouseEnter} /> {actualStock === 0 && <span className='sold-out'>sold out</span>}</>
 			}
 			<div className='mb-plant-item-name'>
 				{name}

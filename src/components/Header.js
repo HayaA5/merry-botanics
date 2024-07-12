@@ -5,6 +5,7 @@ import { UserContext } from '../contexts/UserContext'
 import { useContext } from 'react';
 import styled from 'styled-components'
 import { IoPersonOutline } from "react-icons/io5";
+import { TbLogout } from "react-icons/tb";
 
 const StyledLink = styled(Link)`
   color: white;
@@ -29,7 +30,8 @@ function Header() {
             setUser("");
             localStorage.clear();
           }}
-            state={{ logout: true }}>logout</StyledLink>
+            state={{ logout: true }}>logout <TbLogout />
+          </StyledLink>
         }
       </div>
 

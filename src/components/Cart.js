@@ -6,7 +6,9 @@ import Payment from './Payment';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import '../styles/Cart.css'
 import CartItem from './CartItem';
-
+import { CiTrash } from "react-icons/ci";
+import { TbTrash } from 'react-icons/tb';
+import { AiOutlineClose } from 'react-icons/ai';
 //function Cart({cartLS,logout}){
 function Cart() {
 	const location = useLocation();
@@ -38,16 +40,22 @@ function Cart() {
 	return isOpen ? (
 		<div className='mb-cart'>
 			<div className='shopping-cart-icon-container'>
-				<AiOutlineShoppingCart className='shopping-cart-icon' />
+				{cart.length > 0 ? <CiTrash className='empty-cart-icon' onClick={() => updateCart([])} /> : <div></div>}
+				<div>
+					<AiOutlineShoppingCart className='shopping-cart-icon light' />
+					<span class='badge badge-light'> {cart.length} </span>
+				</div>
 				<button
 					className='mb-cart-toggle-button'
 					onClick={() => setIsOpen(false)}
 				>
-					close
+					<AiOutlineClose className='close-icon' />
+					{/* close */}
 				</button>
 			</div>
 			{cart.length > 0 ? (
 				<div>
+					{/* <CiTrash className='empty-cart-icon' /> */}
 					<h2>Cart</h2>
 					{!user.email && <div className='message-login'>{messageLogIn}</div>}
 
@@ -64,12 +72,13 @@ function Cart() {
 					</ul>
 					<h3>Total :{total}$</h3>
 					<div className='cart-btns-container'>
-						<button className='cart-btn empty' onClick={() => updateCart([])}>Empty cart</button>
+						{/* <button className='cart-btn empty' onClick={() => updateCart([])}>Empty cart</button> */}
 						<Payment cart={cart} />
 					</div>
 				</div>
 			) : (
-				<div>Your cart is empty</div>
+				<></>
+				// <div>Your cart is empty</div>
 			)}
 		</div>
 	) : (
@@ -78,7 +87,9 @@ function Cart() {
 				className='mb-cart-toggle-button closed'
 				onClick={() => setIsOpen(true)}
 			>
-				Open cart
+				<AiOutlineShoppingCart className='shopping-cart-icon dark' />
+				<span class='badge badge-dark'> {cart.length} </span>
+
 			</button>
 		</div>
 	)

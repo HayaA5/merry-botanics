@@ -36,7 +36,7 @@ function ShoppingList() {
 	return (
 		<div className='mb-shopping-list'>
 			<div className='filters'>
-				<div></div>
+				{/* <div></div> */}
 				<Categories
 					categories={categories}
 					setActiveCategory={setActiveCategory}
