@@ -15,7 +15,7 @@ function Cart() {
 	const logout = location.state?.logout;
 	const [user,] = useContext(UserContext);
 	const [cart, updateCart] = useContext(CartContext);
-	const [isOpen, setIsOpen] = useState(true)
+	const [isOpen, setIsOpen] = useState(false)
 	const [messageLogIn, setMessageLogIn] = useState('');
 
 	const total = cart.reduce(
@@ -30,9 +30,8 @@ function Cart() {
 	useEffect(() => {
 		//localStorage.setItem('cart', JSON.stringify(cart));
 		setMessageLogIn('Aware! You are not logged in- data will be lost!');
-	}, [cart]
+	}, [])
 
-	)
 	useEffect(() => {
 		logout && updateCart([])
 	}, [logout])
@@ -43,7 +42,7 @@ function Cart() {
 				{cart.length > 0 ? <CiTrash className='empty-cart-icon' onClick={() => updateCart([])} /> : <div></div>}
 				<div>
 					<AiOutlineShoppingCart className='shopping-cart-icon light' />
-					<span class='badge badge-light'> {cart.length} </span>
+					<span class='badge badge-light'><p className='cart-qty'>  {cart.length}</p> </span>
 				</div>
 				<button
 					className='mb-cart-toggle-button'
@@ -87,9 +86,10 @@ function Cart() {
 				className='mb-cart-toggle-button closed'
 				onClick={() => setIsOpen(true)}
 			>
-				<AiOutlineShoppingCart className='shopping-cart-icon dark' />
-				<span class='badge badge-dark'> {cart.length} </span>
-
+				<div className='shopping-cart-icon-container'>
+					<AiOutlineShoppingCart className='shopping-cart-icon dark' />
+					<span class='badge badge-dark'><p className='cart-qty'> {cart.length} </p></span>
+				</div>
 			</button>
 		</div>
 	)

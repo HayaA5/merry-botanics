@@ -14,10 +14,23 @@
 	font-size: 2.5rem;
 	font-weight: 500;
 	color: #31b572;
-	animation: text-color 6s forwards, display-txt 6s ease-out 0s 1 reverse;
+	animation: text-color 6s forwards;
+	/* , display-txt 4s ease-out 0s 1 reverse; */
+
 	/* animation: display-txt 6s ease-out 0s 1 reverse; */
 	/* animation: typing 4s 0s forwards; */
 	/* , blink-caret .75s step-end infinite; */
+}
+
+@keyframes display2 {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+
 }
 
 @keyframes display-txt {
@@ -47,15 +60,9 @@
 	0% {
 		/* bottom: -0.2em; */
 		/* opacity: 1; */
-		color: #87ebb9;
+		color: #bfe9d4;
 		opacity: 0.1;
 		/* width: 0; */
-	}
-
-	50% {
-		/* bottom: 0.2em; */
-		color: #02311a;
-		opacity: 0.5;
 	}
 
 	100% {

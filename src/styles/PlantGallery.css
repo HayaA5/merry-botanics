@@ -5,6 +5,7 @@
     left: 50%;
     width: 400px;
     height: 400px;
+    /* animation: display1 1s ease-out 0s 1 forwards; */
 }
 
 .image {
@@ -13,6 +14,44 @@
     height: 400px;
     border-radius: 5px;
     object-fit: cover;
+    /* transition: all 0.5s; */
+    /* transform: translateX(50%); */
+    animation: display1 2s ease-out 0s 1 forwards;
+    /* animation: fadeIn 1.5s ease-out 0s 1 forwards; */
+}
+
+@keyframes display1 {
+    from {
+        opacity: 0.25;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes slidein {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes display2 {
+    from {
+        -ms-transform-origin-x: -50%;
+        /* transformOrigin:"100% 50%"; */
+        width: 0;
+    }
+
+    to {
+        width: 100%
+    }
+
 }
 
 .caroussel-icon {
@@ -30,4 +69,26 @@
     position: absolute;
     top: 50%;
     right: 4px;
+}
+
+@keyframes fadeIn {
+    from {
+        /* opacity: 0; */
+        transform: translate(50%, 0);
+    }
+
+    to {
+        /* opacity: 1; */
+        transform: translate(100%, 0px);
+    }
+}
+
+@keyframes display {
+    from {
+        width: 20%;
+    }
+
+    to {
+        width: 100%;
+    }
 }

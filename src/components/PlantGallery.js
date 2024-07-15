@@ -15,9 +15,19 @@ export default function PlantGallery({ images }) {
 
     return (
         <div className="images-container">
+            {/* <CSSTransition
+        // in={showMessage}
+        // nodeRef={nodeRef}
+        timeout={300}
+        classNames="alert"
+        unmountOnExit
+        onEnter={index}
+        onExited={index}
+      > */}
             <GrPrevious className='caroussel-icon prev' onClick={() => setIndex(index => index === 0 ? images.length - 1 : (index - 1))} size={25} />
-            <img src={images[index]} className='image' />
+            <img key={index} src={images[index]} className='image' />
             <GrNext className='caroussel-icon next' onClick={() => setIndex(index => index === images.length - 1 ? 0 : (index + 1))} size={25} />
+            {/* </CSSTransition> */}
         </div>
     )
 }

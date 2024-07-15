@@ -6,6 +6,7 @@ import Loader from './Loader'
 import api from '../functions/API_Calls/apiCalls'
 import process from "process";
 import { CiSearch } from "react-icons/ci";
+import PlantItm2 from './PlantItm2'
 
 function ShoppingList() {
 	const [activeCategory, setActiveCategory] = useState('')
@@ -52,7 +53,7 @@ function ShoppingList() {
 					{ barcode, cover, name, water, light, price, category, stock, stockReal = stock, description, images_gallery }) =>
 					!activeCategory || activeCategory === category ? (
 						<div key={barcode} className='one-plant-item'>
-							<PlantItem
+							<PlantItm2
 								cover={cover}
 								name={name}
 								water={water}
